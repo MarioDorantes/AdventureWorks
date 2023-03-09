@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="557.0" prefWidth="1350.0" style="-fx-background-color: #99CCFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxadventurew2016.FXMLDocumentController">
+   <children>
+      <Label layoutX="14.0" layoutY="34.0" prefHeight="35.0" prefWidth="446.0" text="Gestión Personas Adventure Works">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbInformacionPersonas" layoutX="14.0" layoutY="85.0" prefHeight="443.0" prefWidth="1027.0">
+        <columns>
+          <TableColumn fx:id="colTipoPersona" prefWidth="93.0" text="Tipo Persona" />
+          <TableColumn fx:id="colPrimerNombre" prefWidth="106.0" text="Primer Nombre" />
+            <TableColumn fx:id="colSegundoNombre" prefWidth="100.0" text="2do Nombre" />
+            <TableColumn fx:id="colApellido" prefWidth="107.0" text="Apellido" />
+            <TableColumn fx:id="colNumTarjeta" prefWidth="129.0" text="Número Tarjeta" />
+            <TableColumn fx:id="colTipoTarjeta" prefWidth="93.0" text="Tipo Tarjeta" />
+            <TableColumn fx:id="colMesVen" prefWidth="69.0" text="Mes Ven" />
+            <TableColumn fx:id="colAnioVencimiento" prefWidth="70.0" text="Año Ven" />
+            <TableColumn fx:id="colCorreo" prefWidth="106.0" text="Correo" />
+            <TableColumn fx:id="colNumTelefono" prefWidth="86.0" text="Número" />
+            <TableColumn fx:id="colTipoTel" prefWidth="67.0" text="Tipo Num" />
+        </columns>
+      </TableView>
+      <Label layoutX="1049.0" layoutY="81.0" text="Tipo de Persona: ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1049.0" layoutY="115.0" text="Primer Nombre: ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1051.0" layoutY="146.0" text="Segundo Nombre (opcional):">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1051.0" layoutY="179.0" text="Apellido: ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1049.0" layoutY="231.0" text="Número Tarjeta de Crédito:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1049.0" layoutY="265.0" text="Tipo de Tarjeta de Crédito:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1051.0" layoutY="368.0" text="Correo Electrónico:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1051.0" layoutY="396.0" text="Número de Teléfono:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1049.0" layoutY="428.0" text="Tipo de Teléfono:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1051.0" layoutY="293.0" text="Mes de Vencimiento Tarjeta:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1051.0" layoutY="321.0" text="Año de Vencimiento Tarjeta:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="1047.0" layoutY="476.0" mnemonicParsing="false" onAction="#clicRegistrarPersona" prefHeight="37.0" prefWidth="116.0" style="-fx-background-color: #00CC00;" text="Registrar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtPrimerNombre" layoutX="1149.0" layoutY="112.0" prefHeight="25.0" prefWidth="175.0" />
+      <TextField fx:id="txtSegundoNombre" layoutX="1227.0" layoutY="143.0" prefHeight="25.0" prefWidth="95.0" />
+      <TextField fx:id="txtApellido" layoutX="1112.0" layoutY="176.0" prefHeight="25.0" prefWidth="212.0" />
+      <TextField fx:id="txtNumeroTarjeta" layoutX="1217.0" layoutY="228.0" prefHeight="25.0" prefWidth="109.0" />
+      <TextField fx:id="txtTipoTarjeta" layoutX="1206.0" layoutY="262.0" prefHeight="25.0" prefWidth="122.0" />
+      <TextField fx:id="txtCorreo" layoutX="1163.0" layoutY="365.0" prefHeight="25.0" prefWidth="166.0" />
+      <TextField fx:id="txtNumeroTel" layoutX="1178.0" layoutY="393.0" prefHeight="25.0" prefWidth="149.0" />
+      <ComboBox fx:id="cbTipoPersona" layoutX="1149.0" layoutY="78.0" prefHeight="25.0" prefWidth="175.0" />
+      <ComboBox fx:id="cbMesVencimiento" layoutX="1219.0" layoutY="290.0" prefHeight="25.0" prefWidth="109.0" />
+      <ComboBox fx:id="cbAnioVencimiento" layoutX="1214.0" layoutY="318.0" prefHeight="25.0" prefWidth="116.0" />
+      <ComboBox fx:id="cbTipoTel" layoutX="1152.0" layoutY="425.0" prefHeight="25.0" prefWidth="175.0" />
+      <Button layoutX="1209.0" layoutY="476.0" mnemonicParsing="false" onAction="#clicEliminarPersona" prefHeight="37.0" prefWidth="116.0" style="-fx-background-color: FF0000;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
